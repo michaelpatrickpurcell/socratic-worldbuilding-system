@@ -16,7 +16,6 @@ To create a new SWS game, follow the steps you will do the following:
   2. Describe a Disruptive Change to that Setting
   3. Describe the Characters that the players will portray.
   4. Describe the Topics that the characters have gathered to discuss.
-  5. 
 
 ## Setting
 A setting is a description of the world in which the events of a story will take place.
@@ -35,7 +34,7 @@ This change is something that will significantly affect the players' characters.
 ### Examples of Disruptive Changes
   - Staff Meeting: Students have recently started using staffs to augment their magical abilities.
   - Parliament of Dragons: A group of humans have arrived from overseas and are establishing new colonies.
-  - Kill the Beast: Several A local farmer claims to have seen a monster lurking in the woods.
+  - Kill the Beast: A local farmer claims to have seen a monster lurking in the woods.
 
 ## Characters
 Each player will portray one character throughout the game.
@@ -80,3 +79,7 @@ That is, each question is one of the Five Ws: who, what, why, where, and when.
     - Why is the monster encroaching on the village?
     - Where has the monster been spotted?
     - When has the  been spotted?
+
+  ## Gameplay
+  Test
+  
