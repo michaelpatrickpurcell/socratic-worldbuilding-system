@@ -75,7 +75,7 @@ That is, each question is one of the Five Ws: who, what, why, where, and when.
     - When did the colonists arrive?
   - Kill the Beast:
     - Who has seen the monster?
-    - What evidence do we have that the monster is real?
+    - What evidence suggests that the monster is real?
     - Why is the monster encroaching on the village?
     - Where has the monster been spotted?
     - When has the  been spotted?
