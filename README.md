@@ -81,5 +81,4 @@ That is, each question is one of the Five Ws: who, what, why, where, and when.
     - When has the  been spotted?
 
   ## Gameplay
-  Test. Testing, Testing, testing.
-  
+  Test.
