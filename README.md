@@ -1,5 +1,5 @@
 # Socratic Worldbuilding System
-A system for creating semi-competitive tabletop roleplaying games.
+A system for creating one-page tabletop roleplaying games.
 
 ## Introduction
 Socratic Worldbuilding System (SWS) games are about disruptive change.
@@ -11,11 +11,11 @@ In each section, we will show how the concepts discussed in that section are use
 The example games are: Staff Meeting, Parliament of Dragons, and Kill the Beast.
 Complete versions of all three example games can be found in the appendices to this rulebook.
 
-To create a new SWS game, follow the steps you will do the following:
+<!-- To create a new SWS game, follow the steps you will do the following:
   1. Describe a Setting.
   2. Describe a Disruptive Change to that Setting
   3. Describe the Characters that the players will portray.
-  4. Describe the Topics that the characters have gathered to discuss.
+  4. Describe the Topics that the characters have gathered to discuss. -->
 
 ## Setting
 A setting is a description of the world in which the events of a story will take place.
@@ -38,7 +38,7 @@ This change is something that will significantly affect the players' characters.
 
 ## Characters
 Each player will portray one character throughout the game.
-The characters have gathered to duscuss the ways in which they have been affected by the game's disruptive change.
+The characters have gathered to discuss the ways in which they have been affected by the game's disruptive change.
 
 ### Examples of Characters
   - Staff Meeting: Professors who are preparing the curriculum for the upcoming school year.
@@ -56,11 +56,10 @@ Each character is particularly interested in discussing two of the four themes.
   - Kill the Beast: Public Safety, Stewardship, Politics, Economics
 
 ## Questions
-In each SWS game, there are five questions about the nature of the disruptive change that the players will answer.
-Each such question is one of the journalistic questions.
-That is, each question is one of the Five Ws: who, what, why, where, and when.
+In every SWS game, there are five questions about the nature of the disruptive change that the players will answer.
+All of the questions are open-ended, and the players will invent details about the setting as needed to answer them.
 
-### Examples of Questions
+### Examples of Journalistic Questions
   - Staff Meeting:
     - Who can use a staff?
     - What can staffs do?
@@ -75,10 +74,23 @@ That is, each question is one of the Five Ws: who, what, why, where, and when.
     - When did the colonists arrive?
   - Kill the Beast:
     - Who has seen the monster?
-    - What evidence suggests that the monster is real?
+    - What evidence about the monster has been found?
     - Why is the monster encroaching on the village?
     - Where has the monster been spotted?
-    - When has the  been spotted?
+    - When has the monster been spotted?
 
-  ## Gameplay
-  Test.
+## Gameplay
+The game takes place over several turns.
+On each turn, one player will be the active player.
+The active player will choose one of the unanswered questions about the game's disruptive change and answer it.
+Then, other players should ask a series of follow-up questions about the active player's answer.
+Via this process of Socratic questioning, the players will gradually describe the game's setting and how that setting has been affected by the game's disruptive change.
+When everyone is ready to move on, the active player will choose someone who has not yet served as the active player to be the active player for the next round.
+The game ends when all of the questions about the game's disruptive change have been answered.
+
+### Socratic Questioning
+  - Clarifying concepts
+  - Challenging assumptions
+  - Probing rationale and evidence
+  - Predicting implications and consequences
+  - Exploring alternative viewpoints
