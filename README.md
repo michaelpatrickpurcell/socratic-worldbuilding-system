@@ -6,8 +6,8 @@ Socratic Worldbuilding System (SWS) games are about disruptive change.
 In an SWS game, the players portray characters who have gathered to discuss the ways in which they have been affected by such a change.
 By answering a series of questions about the nature of the disruptive change, they will describe the world in which the game is set.
 
-All SWS games are comprised of the same small collection of concepts.
-In the following sections, we will use three SWS games as running examples to illustrate each such concept.
+All SWS games are comprised of the same small collection of concepts. These are: a setting, a disruptive change to that setting, characters, and topics of discussion.
+In the following sections, we will use three SWS games as running examples.
 The example games are: Staff Meeting, Parliament of Dragons, and Kill the Beast.
 Complete versions of all three example games can be found in the appendices to this rulebook.
 

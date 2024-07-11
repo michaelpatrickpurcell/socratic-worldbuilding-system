@@ -1,0 +1,315 @@
+\documentclass[12pt, a5paper, parskip=half-, footheight=1.4cm]{scrartcl}
+
+\usepackage{scrlayer-scrpage} % Manage headers and footers in Koma-Script document classes
+
+\usepackage[bmargin=2.5cm, lmargin=1.7cm, rmargin=1.7cm, tmargin=2cm, footskip=2cm]{geometry} % Set margins and footer placement
+
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta} % Customize arrowheads in in Write the Outline example
+\usetikzlibrary{shapes} % Draw the node in the fancy \pagemark
+
+\usepackage[skins]{tcolorbox} % Add background image to tikz node in color cover
+
+\usepackage{fontspec} % Use system fonts.  Not compatible with pdflatex. Use XeLaTeX instead!
+
+\usepackage{enumitem} % Adjust formatting of description environment items
+\usepackage{multicol} % Format list of playtesters in two columns
+
+\usepackage[type={CC}, version={4.0}, modifier={by}]{doclicense} % Add text and icons for creative commons license
+
+\usepackage{eso-pic}
+
+\usepackage[hidelinks]{hyperref} % Add hyperlinks to the pdf file. This should usually be the last package loaded before \begin{document}
+\usepackage[xspace]{ellipsis} % Properly typeset ellipses. This package is one of the few packages that must be loaded after hyperref
+
+
+% Define command to set value of a variable that contains the version number
+% This is meant to mimic the syntax used for the built-in \title{} and \author{} commands.
+\makeatletter
+\newcommand{\version}[1]{\newcommand{\@version}{#1}}
+\makeatother
+
+%Define a fancy \pagemark with some decoration around the page number.
+%\renewcommand{\pagemark}{
+%	\begin{tikzpicture}
+%		\setmainfont[Scale=1.5]{Bilbo Swash Caps}
+%		\foreach\i/\j in {0/90, 72/162, 144/234, 216/306, 288/18}
+%			\node[inner sep=0, rotate=\i] at (\j:2.6ex) {W};
+%		\setmainfont{Tex Gyre Heros}
+%		\node (b) at (0,0) {\arabic{page}};
+%	\end{tikzpicture}
+%}
+
+% Set header and footer text
+\clearpairofpagestyles
+\makeatletter
+\chead*{\normalshape \footnotesize \footnotesize Version \@version}
+\makeatother
+\cfoot{\normalshape \pagemark}
+
+% Adjust spacing before and after section headings
+\RedeclareSectionCommand[
+  runin=false,
+  beforeskip=0.5\baselineskip,
+  afterskip=0.25\baselineskip
+]{section}
+
+% Adjust spacing before and after subsection headings
+\RedeclareSectionCommand[
+  runin=false,
+  beforeskip=0.5\baselineskip,
+  afterskip=0.25\baselineskip
+]{subsection}
+
+% Adjust spacing before and after subsubsection headings
+\RedeclareSectionCommand[
+  runin=false,
+  beforeskip=0.5\baselineskip,
+  afterskip=0.25\baselineskip
+]{subsubsection}
+
+% Adjust formatting of description environment
+\setlist[description]{font=\normalfont\bfseries, leftmargin=0pt}
+
+% Adjust formatting of itemize environment
+%itemize environments should be followed immediately by a \vspace{1ex} command.
+\setlist[itemize]{noitemsep,nolistsep,  leftmargin=0.68cm,topsep=-1ex}
+
+\setkomafont{section}{\setmainfont{URW Classico}\LARGE\bfseries}
+\setkomafont{subsection}{\setmainfont{URW Classico}\Large\bfseries}
+\setkomafont{subsubsection}{\setmainfont{URW Classico}\large\bfseries}
+
+\definecolor{paper}{HTML}{F1EBDB}
+
+% Set some environment variables for use in the title page
+%\title{\phantom{g}SOCRATIC\phantom{g}\\[0.45ex]WORLDBUILDING\\[0.45ex]SYSTEM}
+\title{\phantom{g}Socratic\phantom{g}\\[0.075ex]Worldbuilding\\[0.075ex]System}
+%\subtitle{A tabletop roleplaying game \\ \smallskip about fate and destiny}
+\author{Michael Purcell}
+\version{0.1}
+
+\begin{document}
+
+% Colour Cover
+%\begin{titlepage}
+%		\makeatletter
+%		\thispagestyle{plain}
+%		\enlargethispage{3.5\baselineskip} % Move the bottom line (author and date) down a bit
+%
+%	\AddToShipoutPictureBG*{
+%		\begin{tikzpicture}[remember picture, overlay]
+%			\draw[fill stretch image=Images/black_marble_texture_vertical.jpg]  (current page.south west) rectangle (current page.north east);
+%		\end{tikzpicture}
+%	}
+%
+%%		\pagecolor{black}		
+%		
+%         \setmainfont{Cinzel Decorative}
+%	    \centering{
+%			{\fontsize{60}{72}\selectfont \textcolor{violet!75}{\@title}}
+%		}
+%
+%		\setmainfont{URWClassico}
+%		\vspace{5mm}
+%		\centering{\Large{{\textcolor{lightgray}{\@subtitle}}}}
+%
+%
+%		\vfill
+%
+%		\includegraphics[scale=3.81]{Images/comet_diagram_violet.pdf}
+%
+%		\vfill
+%		
+%		\Large{{\textcolor{lightgray}{\@author}}}
+%		\makeatother
+%\end{titlepage}
+
+% BW Cover
+\begin{titlepage}
+	\makeatletter
+	\thispagestyle{plain}
+		\enlargethispage{2.5\baselineskip} % Move the bottom line (author and date) down a bit
+		
+         \setmainfont[Scale=4]{URW Classico-Bold}
+	    \centering{\@title}
+
+		\vfill
+
+		\includegraphics[scale=1.1]{sws_logo.pdf}
+
+		\vfill
+		
+		\setmainfont{URW Classico}\Large{{\textcolor{black}{Designed by \@author}}}
+		\makeatother
+\end{titlepage}
+
+\setmainfont{URW Classico}
+\normalsize
+
+%\AddToShipoutPictureBG{
+%	\begin{tikzpicture}[remember picture, overlay]
+%		\draw[fill stretch image=Images/paper_texture_vertical.jpg]  (current page.south west) rectangle (current page.north east);
+%	\end{tikzpicture}
+%}
+
+%\pagecolor{paper}
+
+%\RedeclareSectionCommand[
+%  runin=false,
+%  beforeskip=0.5\baselineskip,
+%  afterskip=-0.25\baselineskip
+%]{section}
+
+\center
+
+\setcounter{page}{1}
+
+\raggedright
+\section*{Introduction} \label{section:introduction}
+The Socratic Worldbuilding System (SWS) is a tool for creating one-page tabletop roleplaying games.
+
+Every Socratic Worldbuilding Game (SWG) is about disruptive change.
+In an SWG, the players portray characters who have gathered to discuss the ways in which they have been affected by such a change.
+By answering a series of questions about the nature of the disruptive change, they will describe the world in which the game is set.
+
+All SWGs comprise the same component parts: a setting, a disruptive change to that setting, characters, and topics of discussion.
+In the following sections, we will use four SWGs as running examples.
+The example games are: Staff Meeting, Parliament of Dragons, Kill the Beast, Not From Around Here.
+Complete versions of all four example games can be found in the appendices to this rulebook.
+
+%\subsection*{Materials} \label{subsection:materials}
+%Socratic Worldbuilding Games generally require few, if any, material components to play. The Socratic Worldbuilding System is similarly lightweight. All that is required is a few index cards and something to write with. 
+
+\newpage
+
+\subsection*{Setting}
+A setting is a description of the world in which the events of a story will take place.
+In an SWG, the setting should provide a rough sketch of the world that the characters inhabit.
+The players will fill in the details of the game's setting as they play.
+
+\subsubsection*{Examples of Settings}
+\begin{description}
+\item[Staff Meeting:] A fantastical school of witchcraft and wizardry.
+\item[Parliament of Dragons:] An island ruled by territorial dragons.
+\item[Kill the Beast:] A village on the edge of a mysterious forest.
+\item[Not From Around Here:] A luxury resort on a tropical island.
+\end{description}
+
+\newpage
+
+\subsection*{Disruptive Change}
+A disruptive change is something that changes some aspect of the setting.
+This change is something that will significantly affect the players' characters.
+
+\subsubsection*{Examples of Disruptive Changes}
+\begin{description}
+\item[Staff Meeting:] Students have recently started using staffs to augment their magical abilities.
+\item[Parliament of Dragons:] A group of humans have arrived from overseas and are establishing new colonies.
+\item[Kill the Beast:] A local farmer claims to have seen a monster lurking in the woods.
+\item[Not From Around Here:] An increasing number of the guests are extraterrestrial aliens.
+\end{description}
+
+\newpage
+
+\subsection*{Characters}
+The characters are the people that the players will portray for the duration of the game.
+Each player will portray one character throughout the game.
+In an SWS game, the characters have gathered to discuss the ways in which they have been affected by the game's disruptive change.
+
+\subsubsection*{Examples of Characters}
+\begin{description}
+\item[Staff Meeting] Professors who are preparing the curriculum for the upcoming school year.
+\item[Parliament of Dragons:] Ancient wyrms who have long vied for dominance.
+\item[Kill the Beast:] Villagers whose work requires them to venture into the forest.
+\item[Not From Around Here:] Hospitality workers who are responsible for running the resort.
+\end{description}
+
+\newpage
+
+\subsection*{Topics}
+Every SWG features four topics that the players' characters have gathered to discuss.
+Each topic addresses one aspect of the setting that will be affected by the disruptive change.
+Each character has two topics of interest.
+A character's final score is based on how prominently their topics of interest are in the discussion during the course of the game.
+
+\subsubsection*{Examples of Topics}
+\begin{description}
+\item[Staff Meeting:] Educational Outcomes, Academic Integrity, Facilities \& Logistics, Equal Opportunity
+\item[Parliament of Dragons:] Treasure, Renown, Food, Territory
+\item[Kill the Beast:] Public Safety, Stewardship, Politics, Economics
+\item[Not From Around Here:] Dining \& Entertainment, Guest Safety \& Comfort, Payment \& Gratuities, Reputation \& Marketing.
+\end{description}
+
+\newpage
+
+\subsection*{Collaborative Storytelling} \label{subsection:collaborative-storytelling}
+Prophecy is a storytelling game.
+As such, the players' ultimate goal in the game should be to tell an interesting story.
+The rules of the game are designed to help the players do so.
+If at any point the players need to choose between following the rules or telling a good story, they should choose the latter.
+
+Prophecy is also a collaborative game.
+Collaboration implies shared ownership.
+As such, the players should be equal partners in the playing of the game.
+No player should ever try to unilaterally dictate what happens in the story and no player should ever feel like their contributions have been ignored or overruled by another player.
+
+\subsection*{Safety Tools} \label{subsection:safety-tools}
+Because stories can provoke strong emotional responses, the players should be sensitive to one another's feelings during the game.
+They should avoid, or retroactively remove, any content that makes any of the players uncomfortable.
+
+It can be difficult, however,  to identify such content. 
+So, the players should establish some ground rules about what should be excluded before the game begins. 
+They should also establish a way to indicate that something in the story has made someone uncomfortable and should be removed or replaced.
+
+Players who identify problematic content do not need to explain themselves.
+Because the other players may not know what the problem is, the player who identified the issue should suggest a satisfactory alternative.
+
+\newpage
+
+\subsection*{Playtesters} \label{subsection:playtesters}
+The following people helped to refine the design of Prophecy:\vspace{-1.75ex}
+\begin{multicols}{2}
+\begin{itemize}
+  \item Keydan Bruce
+  \item Farzana Choudhury
+  \item Dannielle Harden
+  \item Andrew Hellyer
+  \item Sarah Hewat
+  \item Scott Joblin
+  \item David McKenzie
+  \item Paul Murray
+  \item Kira Purcell
+  \item Luke Purcell
+  \item Jo Stephenson
+  \item Brett Witty
+\end{itemize}
+\end{multicols}
+
+\subsection*{Influences} \label{subsection:influences}
+The following games influenced the design of Prophecy:
+\begin{description}[font=\normalfont\textbullet\space, noitemsep, topsep=-1ex]
+	\item[Fate:] Aspects and Objects.
+	\item[Fiasco:] Scenes and scene-level resolution.
+	\item[Our Last Best Hope:] Theme and narrative focus.
+	\item[10 Candles:] Session modules.
+	\item[Microscope:] Non-linear storytelling.
+\end{description}
+\vspace{1ex}
+Safety Tools is based on the X-Card by John Stavropoulus.
+
+\subsection*{Design Tools} \label{subsection:design-tools}
+The following tools were used to create this booklet:
+\begin{description}[font=\normalfont\textbullet\space, noitemsep, topsep=-1ex]
+	\item[XeLaTeX:] Typesetting and layout.
+	\item[TikZ:] Diagrams and art.
+\end{description}
+\vspace{1ex}
+The fonts used in this booklet are TeX Gyre Heros and URW Classico.
+\vspace{0.25\baselineskip}
+
+\vfill
+
+Contact: \href{mailto:prophecy.ttrpg@gmail.com}{prophecy.ttrpg@gmail.com}\\
+\vspace{-2.5ex}\doclicenseText \hfill  \Huge{\doclicenseIcon}
+
+\end{document}

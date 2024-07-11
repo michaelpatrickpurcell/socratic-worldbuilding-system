@@ -1,0 +1,20 @@
+\documentclass{standalone}
+\usepackage{fontspec}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{tikz}
+
+\newlength{\radius}
+
+\setmainfont[Scale=10]{Bilbo Swash Caps}
+\setlength{\radius}{2.6ex}
+
+\begin{document}
+\begin{tikzpicture}
+\node[inner sep=0] at (90:\radius) {W};
+\node[rotate=72, transform shape, inner sep=0] at (162:\radius) {W};
+\node[rotate=144, transform shape, inner sep=0] at (234:\radius) {W};
+\node[rotate=216, transform shape, inner sep=0] at (306:\radius) {W};
+\node[rotate=288, transform shape, inner sep=0] at (18:\radius) {W};
+\path (-4.5ex, -4.5ex) rectangle (4.5ex, 4.5ex);
+\end{tikzpicture}
+\end{document}
